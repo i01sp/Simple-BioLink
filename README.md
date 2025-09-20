@@ -8,6 +8,12 @@
 
 </div>
 
+## Aperçu
+
+<div align="center">
+  <img src="./public/images/screenshot.png" alt="Screenshot Biolink" width="600"/>
+</div>
+
 ## Démarrage
 
 ```bash

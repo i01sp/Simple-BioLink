@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes heartbeat {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1),
+                    0 0 20px rgba(255, 255, 255, 0.1),
+                    0 0 30px rgba(255, 255, 255, 0.1);
+}
+  50% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1),
+                0 0 40px rgba(255, 255, 255, 0.1),
+                0 0 50px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1),
+                0 0 20px rgba(255, 255, 255, 0.1),
+                0 0 30px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.heartbeat-shadow {
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border-radius: 8px;
+  height: 12px;
+  border: none;
+}
+
+.slider::-webkit-slider-track {
+  background: rgba(0, 0, 0, 0.5);
+  height: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+.slider::-moz-range-track {
+  background: rgba(0, 0, 0, 0.5);
+  height: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #ffffff;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+  border: 2px solid #e5e7eb;
+}
+
+.slider::-moz-range-thumb {
+  background: #ffffff;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  border: 2px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: #f3f4f6;
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.slider::-moz-range-thumb:hover {
+  background: #f3f4f6;
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.social-link {
+  position: relative;
+}
+
+.social-link .absolute {
+  z-index: 50;
+  pointer-events: none;
+}
+
+.social-link:hover .absolute {
+  opacity: 1;
+}
+
+.social-link .absolute {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
